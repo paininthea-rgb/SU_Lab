@@ -50,6 +50,10 @@ body {
   animation-duration: 22s;
 }
 
+.login-panel-pattern {
+  position: relative;
+}
+
 .login-panel-pattern::before {
   content: "";
   position: absolute;
