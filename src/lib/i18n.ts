@@ -35,6 +35,11 @@ export const translations = {
     hint_arc: 'Click start, end, then arc point',
     hint_move: 'Select object, then drag on the ground plane',
     hint_orbit: 'Middle mouse to orbit, Shift+Middle to pan, wheel to zoom',
+    emailPlaceholder: 'Email',
+    passwordPlaceholder: 'Password',
+    loginButton: 'Log In',
+    orSignIn: 'or sign in with',
+    loginError: 'Invalid email or password.',
   },
   vi: {
     title: 'SU Lab - Phác Thảo 3D',
@@ -70,6 +75,11 @@ export const translations = {
     hint_arc: 'Nhấp điểm đầu, điểm cuối rồi điểm cung',
     hint_move: 'Chọn đối tượng rồi kéo trên mặt phẳng',
     hint_orbit: 'Chuột giữa để xoay, Shift+Chuột giữa để pan, lăn để zoom',
+    emailPlaceholder: 'Email',
+    passwordPlaceholder: 'Mật khẩu',
+    loginButton: 'Đăng Nhập',
+    orSignIn: 'hoặc đăng nhập bằng',
+    loginError: 'Email hoặc mật khẩu không đúng.',
   },
 } as const;
 

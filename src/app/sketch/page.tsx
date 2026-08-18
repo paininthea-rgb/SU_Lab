@@ -45,16 +45,20 @@ export default function SketchPage() {
   const actionIdRef = useRef(0);
 
   useEffect(() => {
-    if (!loading && !user) {
-      router.replace('/');
-    }
+    // AUTH DISABLED — skip redirect
+    // if (!loading && !user) {
+    //   router.replace('/');
+    // }
   }, [loading, router, user]);
 
   useEffect(() => {
     let ignore = false;
 
     const loadSketch = async () => {
-      if (!user) return;
+      if (!user) {
+        setHydrated(true);
+        return;
+      }
       const firestore = db;
       if (!firebaseConfigured || !firestore) {
         if (!ignore) {
@@ -153,16 +157,12 @@ export default function SketchPage() {
     );
   }
 
-  if (!user) {
-    return null;
-  }
-
   return (
     <div className="flex h-screen flex-col bg-gray-950 text-white">
       <header className="z-10 flex items-center justify-between border-b border-white/10 bg-gray-900 px-4 py-3">
         <div>
           <h1 className="text-lg font-bold text-blue-400">{t.title}</h1>
-          <p className="text-xs text-gray-400">{t.welcome}, {user.displayName ?? user.email ?? 'User'}</p>
+          <p className="text-xs text-gray-400">{t.welcome}, {user?.displayName ?? user?.email ?? 'Guest'}</p>
         </div>
         <div className="flex items-center gap-3">
           {cloudLabel ? <span className="text-xs text-gray-400">{cloudLabel}</span> : null}
@@ -172,7 +172,7 @@ export default function SketchPage() {
             className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xl transition hover:bg-white/10"
             title="Toggle Language"
           >
-            {lang === 'en' ? '🇻🇳' : '🇬🇧'}
+            {lang === 'en' ? '🇻🇳' : 'ENG'}
           </button>
           <button
             type="button"
