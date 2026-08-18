@@ -39,37 +39,37 @@ export default function Home() {
         {lang === 'en' ? '🇻🇳' : '🇬🇧'}
       </button>
 
-      <div className="relative z-10 w-full max-w-6xl rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl shadow-indigo-950/40 backdrop-blur-xl">
+      <div className="relative z-10 mx-2 w-full max-w-6xl rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl shadow-indigo-950/40 backdrop-blur-xl sm:mx-4">
         <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
-          <section className="border-b border-white/10 p-8 lg:border-r lg:border-b-0 lg:p-10">
-            <span className="inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-sm font-semibold text-cyan-200">
+          <section className="border-b border-white/10 p-8 sm:p-10 lg:border-r lg:border-b-0 lg:p-12">
+            <span className="ml-1 inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-sm font-semibold text-cyan-200">
               {t.workspaceBadge}
             </span>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">{t.title}</h1>
             <p className="mt-3 max-w-2xl text-lg text-slate-300">{t.subtitle}</p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-4">
+              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-5">
                 <h2 className="font-semibold text-cyan-200">{t.featureRealtimeTitle}</h2>
                 <p className="mt-2 text-sm text-slate-300">{t.featureRealtimeDesc}</p>
               </article>
-              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-4">
+              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-5">
                 <h2 className="font-semibold text-violet-200">{t.featurePrecisionTitle}</h2>
                 <p className="mt-2 text-sm text-slate-300">{t.featurePrecisionDesc}</p>
               </article>
-              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-4">
+              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-5">
                 <h2 className="font-semibold text-blue-200">{t.featureFocusTitle}</h2>
                 <p className="mt-2 text-sm text-slate-300">{t.featureFocusDesc}</p>
               </article>
-              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-4">
+              <article className="rounded-2xl border border-white/10 bg-slate-800/45 p-5">
                 <h2 className="font-semibold text-emerald-200">{t.featureEntryTitle}</h2>
                 <p className="mt-2 text-sm text-slate-300">{t.featureEntryDesc}</p>
               </article>
             </div>
           </section>
 
-          <section className="flex items-center p-8 lg:p-10">
-            <div className="w-full rounded-2xl border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-slate-950/50">
+          <section className="flex items-center p-8 sm:p-10 lg:p-12">
+            <div className="w-full rounded-2xl border border-white/10 bg-slate-900/80 p-7 shadow-xl shadow-slate-950/50">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">{t.secureAccess}</p>
               <h2 className="mt-2 text-4xl font-bold text-white">{t.startSession}</h2>
               <p className="mt-3 text-slate-300">{t.continueWithGoogle}</p>
@@ -77,7 +77,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => void signInWithGoogle()}
-                className="mt-5 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-white px-6 py-3 font-semibold text-gray-800 transition hover:bg-gray-100"
+                className="mt-6 mx-auto inline-flex min-w-[220px] items-center justify-center gap-3 rounded-xl bg-white px-5 py-2.5 text-base font-semibold text-gray-800 transition hover:bg-gray-100"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -87,8 +87,6 @@ export default function Home() {
                 </svg>
                 {t.login}
               </button>
-
-              <p className="mt-4 text-center text-xs tracking-[0.2em] text-slate-500">{t.authFooter}</p>
             </div>
           </section>
         </div>
