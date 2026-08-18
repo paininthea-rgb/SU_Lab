@@ -28,6 +28,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-image:
     linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
@@ -38,6 +39,7 @@ body {
 
 .login-orb {
   position: absolute;
+  z-index: 1;
   border-radius: 9999px;
   filter: blur(10px);
   animation: login-float 16s ease-in-out infinite;

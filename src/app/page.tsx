@@ -31,7 +31,7 @@ export default function Home() {
       <div className="login-orb login-orb--reverse right-[10%] bottom-24 h-72 w-72 bg-fuchsia-500/20" />
       <div className="login-orb left-[48%] bottom-[12%] h-32 w-32 bg-blue-500/20" />
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col">
         <div className="flex justify-end">
           <button
             type="button"
