@@ -73,7 +73,6 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">{t.secureAccess}</p>
               <h2 className="mt-2 text-4xl font-bold text-white">{t.startSession}</h2>
               <p className="mt-3 text-slate-300">{t.continueWithGoogle}</p>
-              <p className="mt-4 text-slate-200">{t.signInRequired}</p>
 
               <button
                 type="button"
